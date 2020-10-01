@@ -4,18 +4,6 @@ import { MemoryRouter as Router } from "react-router-dom";
 import App from "./App";
 
 describe("App", () => {
-  it("renders the heading", () => {
-    render(
-      <Router>
-        <App />
-      </Router>
-    );
-
-    expect(
-      screen.getByRole("heading", { name: "Testing with react routers" })
-    ).toBeInTheDocument();
-  });
-
   it("navigates to the first component", () => {
     render(
       <Router>

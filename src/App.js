@@ -1,26 +1,25 @@
 import React from "react";
 import { Switch, Route, Link } from "react-router-dom";
-import "./App.css";
 
 function App() {
   return (
     <div>
-      <div>
-        <header>
-          <h1>Testing with react routers</h1>
-        </header>
-      </div>
-      <Switch>
-        <Route exact path="/">
-          <IntroComponent />
-        </Route>
-        <Route path="/first-component">
-          <FirstComponent />
-        </Route>
-        <Route path="/second-component">
-          <SecondComponent />
-        </Route>
-      </Switch>
+      <header>
+        <h1>Testing with react routers</h1>
+      </header>
+      <main>
+        <Switch>
+          <Route exact path="/">
+            <IntroComponent />
+          </Route>
+          <Route path="/first-component">
+            <FirstComponent />
+          </Route>
+          <Route path="/second-component">
+            <SecondComponent />
+          </Route>
+        </Switch>
+      </main>
     </div>
   );
 }
