@@ -6,7 +6,9 @@ function App() {
   return (
     <div>
       <div>
-        <header>Testing with react routers</header>
+        <header>
+          <h1>Testing with react routers</h1>
+        </header>
       </div>
       <Switch>
         <Route exact path="/">
@@ -33,11 +35,11 @@ const IntroComponent = () => {
 };
 
 const FirstComponent = () => {
-  return <div>First Component</div>;
+  return <h2>First component</h2>;
 };
 
 const SecondComponent = () => {
-  return <div>Second Component</div>;
+  return <h2>Second component</h2>;
 };
 
 export default App;
