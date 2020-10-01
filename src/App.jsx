@@ -1,7 +1,7 @@
 import React from "react";
 import { Switch, Route, Link } from "react-router-dom";
 
-function App() {
+const App = () => {
   return (
     <div>
       <header>
@@ -22,7 +22,7 @@ function App() {
       </main>
     </div>
   );
-}
+};
 
 const IntroComponent = () => {
   return (
