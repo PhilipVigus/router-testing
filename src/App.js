@@ -1,26 +1,43 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { Switch, Route, Link } from "react-router-dom";
+import "./App.css";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <div>
+        <header>Testing with react routers</header>
+      </div>
+      <Switch>
+        <Route exact path="/">
+          <IntroComponent />
+        </Route>
+        <Route path="/first-component">
+          <FirstComponent />
+        </Route>
+        <Route path="/second-component">
+          <SecondComponent />
+        </Route>
+      </Switch>
     </div>
   );
 }
+
+const IntroComponent = () => {
+  return (
+    <div>
+      <Link to="first-component">Go to first component</Link>
+      <Link to="second-component">Go to second component</Link>
+    </div>
+  );
+};
+
+const FirstComponent = () => {
+  return <div>First Component</div>;
+};
+
+const SecondComponent = () => {
+  return <div>Second Component</div>;
+};
 
 export default App;
